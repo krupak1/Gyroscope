@@ -1,12 +1,13 @@
 //First we will add the deviceorientation events, and later we will intialize them into Javascript variables.
+if(window.DeviceOrientationEvent){
+    window.addEventListener("deviceorientation", function(event){
 
-window.addEventListener('deviceorientation', function(gyro){
+        controller.x = event.alpha;
+        controller.y = event.beta;
+        controller.z = event.gamma;
 
-    controller.x = gyro.alpha;
-    controller.y = gyro.beta;
-    controller.z = gyro.gamma;
-
-});
+    });
+}
 
 
 //This is a struct that will follow the deviceorientation data

@@ -14,7 +14,7 @@
 
 if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
   
-    alert("Mobile device detected");
+    //alert("Mobile device detected");
     //Initialize the Gyroscope object for the mobile user
     let gyroObject = new Gyroscope(0);
 
@@ -34,14 +34,13 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
 
 
 
-/*
+
   //Useless webpage if the user is not on a mobile device.  Sends a print error message.
   else{
-    mobileUser = false;
+  
     alert("You are not using a Mobile Device.");
   }
 
-*/
 
 
 
