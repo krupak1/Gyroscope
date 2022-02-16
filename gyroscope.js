@@ -32,5 +32,11 @@ class Gyroscope{
         this.x = controller.x
         this.y = controller.y
         this.z = controller.z
+
+        if(this.z > 20) alert("z > 20");
+        if(this.x > 20) alert ("x > 20");
+        if(this.y > 20) alert ("y > 20");
+
+
     }
 }

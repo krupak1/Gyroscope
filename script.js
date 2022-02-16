@@ -7,11 +7,7 @@
 //
 
 
-//First check if the user is using a mobile device and run the script if true.
-
-
-
-
+//First check if the user is using a mobile device and run the script
 if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
   
     //alert("Mobile device detected");
