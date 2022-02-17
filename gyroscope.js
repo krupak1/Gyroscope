@@ -1,7 +1,10 @@
 //First we will add the deviceorientation events, and later we will intialize them into Javascript variables.
+function askPermission(){   
+    DeviceOrientationEvent.requestPermission()
+}
+
 if(window.DeviceOrientationEvent){
     window.addEventListener("deviceorientation", function(event){
-
         controller.x = event.alpha;
         controller.y = event.beta;
         controller.z = event.gamma;
@@ -29,6 +32,8 @@ class Gyroscope{
 
     //We will call this function recursively from script.  It will return the device orientation data.
     update(){
+
+        //alert("Updating");
         this.x = controller.x
         this.y = controller.y
         this.z = controller.z

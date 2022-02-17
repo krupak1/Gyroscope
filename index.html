@@ -5,8 +5,23 @@
     <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, noinitial-scale=1.0">
     <title>Gyroscope</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+		button {
+			color: #ffffff;
+			background-color: #8b4bec;
+			font-size: 19px;
+			border: 5px solid #000000;
+			padding: 15px 50px;
+			cursor: pointer
+		}
+		button:hover {
+			color: #2d63c8;
+			background-color: #ffffff;
+		}
+	</style>
 </head>
 <body>
+    <button type="button" input type="button" onclick="askPermission()" name="myButton">iPhone noobs click here!</button>
     <script src="gyroscope.js"></script>
     <script src="script.js"></script>
 </body>
