@@ -16,7 +16,7 @@ class displayCanvas{
         ctx.fillText("x: " + gyroObject.x, 10, 20);
         ctx.fillText("y: " + gyroObject.y, 10, 50);
         ctx.fillText("z: " + gyroObject.z, 10, 80);
-       // ctx.fillText(Math.random(), 40,40);
+        ctx.fillText("Random number: " + Math.random(), 10,120);
 
     }
 
