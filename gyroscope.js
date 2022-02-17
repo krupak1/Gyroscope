@@ -1,7 +1,7 @@
 //First we will add the deviceorientation events, and later we will intialize them into Javascript variables.
-function askPermission(){   
-    DeviceOrientationEvent.requestPermission()
-    window.addEventListener("deviceorientation", function(event){
+function askPermission(){   //askPermission is an HTML requirement of iOS
+    DeviceOrientationEvent.requestPermission() //This asks for permission (iOS requirement)
+    window.addEventListener("deviceorientation", function(event){ //This listens to the phone orientation values
         controller.x = event.alpha;
         controller.y = event.beta;
         controller.z = event.gamma;
