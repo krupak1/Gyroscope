@@ -41,6 +41,7 @@ class Gyroscope{
         this.y = controller.y
         this.z = controller.z
 
+        
         //Now that we have the X,Y,Z values, we need to send the data to the server and the client webpage will be finished.
 
         /*******
