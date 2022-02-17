@@ -8,7 +8,7 @@
 
 
 //First check if the user is using a mobile device and run the script
-//if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
   
     //alert("Mobile device detected");
     //Initialize the Gyroscope object for the mobile user
@@ -24,7 +24,7 @@
       //Start the recursive function
       runGyroscope();
 
-//}
+}
 
 
 
@@ -32,10 +32,10 @@
 
 
   //Useless webpage if the user is not on a mobile device.  Sends a print error message.
- // else{
+  else{
   
-   // alert("You are not using a Mobile Device.");
- // }
+   alert("You are not using a Mobile Device.");
+ }
 
 
 
