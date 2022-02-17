@@ -13,38 +13,22 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
     //alert("Mobile device detected");
     //Initialize the Gyroscope object for the mobile user
     let gyroObject = new Gyroscope(0);
+    let display = new displayCanvas();
 
-
-    //This is the recursive function that will keep updating the gyroscope
+    //This is the recursive function that will keep updating the gyroscope and display canvas
     function runGyroscope(){
       gyroObject.update();
+      display.update();
       requestAnimationFrame(runGyroscope);
     }
 
-      //Start the recursive function
-      runGyroscope();
-
+    runGyroscope();
 }
 
-
-
-
-
-
-  //Useless webpage if the user is not on a mobile device.  Sends a print error message.
-  else{
-  
-   alert("You are not using a Mobile Device.");
- }
-
-
-
-
-
-
-     //requestAnimationFrame(startGyroscope);  <-- saving for now might delete
-
-
+  //Useless webpage if the user is not on a mobile device.  Send a print error message.
+//  else{
+//   alert("You are not using a Mobile Device.");
+//}
 
 
 
