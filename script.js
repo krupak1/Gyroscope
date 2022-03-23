@@ -7,49 +7,23 @@
 //
 
 
-//First check if the user is using a mobile device and run the script if true.
 
+//We do not necessarily need to validate for mobile/desktop clients, the scripts will just record null values for non-mobile users.
 
-
-
-if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-  
-    alert("Mobile device detected");
     //Initialize the Gyroscope object for the mobile user
     let gyroObject = new Gyroscope(0);
+    let display = new displayCanvas();
+    let frameCounter = 0;
 
-
-    //This is the recursive function that will keep updating the gyroscope
+    //This is the recursive function that will keep updating the gyroscope and display canvas
     function runGyroscope(){
       gyroObject.update();
+      display.update();
+      frameCounter++;
       requestAnimationFrame(runGyroscope);
     }
 
-      //Start the recursive function
-      runGyroscope();
-
-}
-
-
-
-
-
-/*
-  //Useless webpage if the user is not on a mobile device.  Sends a print error message.
-  else{
-    mobileUser = false;
-    alert("You are not using a Mobile Device.");
-  }
-
-*/
-
-
-
-
-
-     //requestAnimationFrame(startGyroscope);  <-- saving for now might delete
-
-
+    runGyroscope();
 
 
 

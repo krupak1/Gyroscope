@@ -1,15 +1,37 @@
+
+
+
+/**
+ * 
+ *      Start regular file here
+ * 
+ */
+
+
+
 //First we will add the deviceorientation events, and later we will intialize them into Javascript variables.
+function askPermission(){   //askPermission is an HTML requirement of iOS
+    DeviceOrientationEvent.requestPermission() //This asks for permission (iOS requirement)
+    window.addEventListener("deviceorientation", function(event){ //This listens to the phone orientation values
+        controller.x = event.alpha;
+        controller.y = event.beta;
+        controller.z = event.gamma;
+    });
+}
 
-window.addEventListener('deviceorientation', function(gyro){
+//Android users will have their data automatically working on page load from this one.  It can be removed, the button above should also work.
+if(window.DeviceOrientationEvent){
+    window.addEventListener("deviceorientation", function(event){
+        controller.x = event.alpha;
+        controller.y = event.beta;
+        controller.z = event.gamma;
 
-    controller.x = gyro.alpha;
-    controller.y = gyro.beta;
-    controller.z = gyro.gamma;
-
-});
+    });
+}
 
 
-//This is a struct that will follow the deviceorientation data
+
+//This is where we are temporarily storing the values.  Each Gyroscope client/Object made from script.js will have it's own x, y, z.
 const controller = {
     x: 0,
     y: 0,
@@ -31,5 +53,15 @@ class Gyroscope{
         this.x = controller.x
         this.y = controller.y
         this.z = controller.z
+
+        
+        //Now that we have the X,Y,Z values, we need to send the data to the server and the client webpage will be finished.
+
+        /*******
+         * 
+         * YOUR CODE HERE
+         * 
+         *******/
+
     }
 }
