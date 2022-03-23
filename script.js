@@ -7,6 +7,7 @@
 //
 
 
+
 //We do not necessarily need to validate for mobile/desktop clients, the scripts will just record null values for non-mobile users.
 
     //Initialize the Gyroscope object for the mobile user
